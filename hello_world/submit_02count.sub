@@ -12,6 +12,6 @@ request_disk = 100MB
 +WANT_RCC_ciconnect = True
 +ProjectName = "xenon1t"
 +AccountingGroup = "group_opportunistic.xenon1t.processing"
-arguments = $(Process)
+arguments = 5
 
 queue

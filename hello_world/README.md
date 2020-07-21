@@ -88,7 +88,7 @@ Look, I can count to 5 :D
 
 With Condor, we pass arguments to the executable using the `arguments` field of the submit script, where as you can see in `submit02_count.sub` we have `arguments = 5`. This will then run the above job on the grid with argument `5` passed as input. 
 
-You can submit this job following the same procedure as above, and then check the output in . 
+You can submit this job following the same procedure as above, and then check the output in `logs/02count.out`. 
 
 
 ## 3. Same job, different arguments

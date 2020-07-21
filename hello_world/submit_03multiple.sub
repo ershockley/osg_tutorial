@@ -1,10 +1,11 @@
 #!/bin/bash
 
-executable = 01hello.sh
+
+executable = 02count.sh
 universe = vanilla
-Error  = logs/01hello.err
-Output = logs/01hello.out
-Log    = logs/01hello.log
+Error  = logs/03multiple.$(Process).err
+Output = logs/03multiple.$(Process).out
+Log    = logs/03multiple.$(Process).log
 
 request_cpus = 1
 request_memory = 1000MB
@@ -12,6 +13,6 @@ request_disk = 100MB
 +WANT_RCC_ciconnect = True
 +ProjectName = "xenon1t"
 +AccountingGroup = "group_opportunistic.xenon1t.processing"
+arguments = $(Process)
 
-
-queue
+queue 10

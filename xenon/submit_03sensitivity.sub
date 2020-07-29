@@ -1,0 +1,21 @@
+#!/bin/bash
+
+executable = 03sensitivity.sh
+universe = vanilla
+Error  = logs/sensitivity_$(Process).err
+Output = logs/03sensitivity_$(Process).out
+Log    = logs/03sensitivity_$(Process).log
+
+Requirements = (HAS_CVMFS_xenon_opensciencegrid_org) && (OSGVO_OS_STRING == "RHEL 7")
+request_cpus = 1
+request_memory = 1000MB
+request_disk = 100MB
++WANT_RCC_ciconnect = True
++ProjectName = "xenon1t"
++AccountingGroup = "group_opportunistic.xenon1t.processing"
+transfer_input_files = lower_mc.py
+transfer_output_files = limits_$(Process).npy
+when_to_transfer_output = ON_EXIT
+arguments = $(Process)
+
+queue 10

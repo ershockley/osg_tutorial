@@ -1,0 +1,20 @@
+#!/bin/bash
+
+executable = 02lower_sim.sh
+universe = vanilla
+Error  = logs/02lower_sim.err
+Output = logs/02lower_sim.out
+Log    = logs/02lower_sim.log
+
+Requirements = (HAS_CVMFS_xenon_opensciencegrid_org) && (OSGVO_OS_STRING == "RHEL 7")
+request_cpus = 1
+request_memory = 1000MB
+request_disk = 100MB
++WANT_RCC_ciconnect = True
++ProjectName = "xenon1t"
++AccountingGroup = "group_opportunistic.xenon1t.processing"
+transfer_input_files = lower_mc.py
+transfer_output_files = my_axion_fit.png
+when_to_transfer_output = ON_EXIT
+
+queue

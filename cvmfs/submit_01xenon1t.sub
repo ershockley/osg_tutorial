@@ -1,0 +1,18 @@
+#!/bin/bash
+
+executable = 01xenon1t.sh
+universe = vanilla
+Error  = logs/01xenon1t.err
+Output = logs/01xenon1t.out
+Log    = logs/01xenon1t.log
+
+Requirements = (HAS_CVMFS_xenon_opensciencegrid_org) && (OSGVO_OS_STRING == "RHEL 7")
+request_cpus = 1
+request_memory = 1000MB
+request_disk = 100MB
++WANT_RCC_ciconnect = True
++ProjectName = "xenon1t"
++AccountingGroup = "group_opportunistic.xenon1t.processing"
+
+
+queue

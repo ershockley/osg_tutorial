@@ -1,0 +1,18 @@
+#!/bin/bash
+
+executable = singularity.sh
+universe = vanilla
+Error  = logs/singularity.err
+Output = logs/singularity.out
+Log    = logs/singularity.log
+
+Requirements =  HAS_CVMFS_xenon_opensciencegrid_org && HAS_SINGULARITY && (OSGVO_OS_STRING == "RHEL 7")
+request_cpus = 1
+request_memory = 1000MB
+request_disk = 5GB
++WANT_RCC_ciconnect = True
++ProjectName = "xenon1t"
++AccountingGroup = "group_opportunistic.xenon1t.processing"
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/xenonnt/base-environment:latest"
+x509userproxy = /xenon/grid_proxy/xenon_service_proxy
+queue 1

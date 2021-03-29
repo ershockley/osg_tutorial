@@ -9,4 +9,3 @@ rucio whoami
 python -c "import strax; print(strax.__file__)"
 
 python -c "from utilix import db"
-q

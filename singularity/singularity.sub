@@ -10,6 +10,7 @@ Requirements =  HAS_CVMFS_xenon_opensciencegrid_org && HAS_SINGULARITY && (OSGVO
 request_cpus = 1
 request_memory = 1000MB
 request_disk = 5GB
+transfer_input_files = /xenon/xenonnt/.xenon_config
 +WANT_RCC_ciconnect = True
 +ProjectName = "xenon1t"
 +AccountingGroup = "group_opportunistic.xenon1t.processing"
